@@ -11,7 +11,7 @@ function SVGGraphics (graphics) {
  */
 SVGGraphics.prototype.drawNode = function (node) {
   var tagName = node.tagName
-  var capitalizedTagName = tagName.charAt(0).toUpperCase() + tagName.slice(1)
+  var capitalizedTagName = tagName.charAt(0).toUpperCase() + tagName.slice(1).toLowerCase()
   if (!this['draw' + capitalizedTagName + 'Node']) {
     console.warn('No drawing behavior for ' + capitalizedTagName + ' node')
   } else {
